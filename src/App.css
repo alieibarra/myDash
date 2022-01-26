@@ -13,3 +13,9 @@ h3 {
   color: dodgerblue;
   display: flex;;
 }
+
+button {
+  background-color: ivory;
+  color: firebrick;
+  font-weight: bold;
+}
