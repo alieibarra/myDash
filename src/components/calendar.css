@@ -1,0 +1,8 @@
+.calendar{
+    margin: 25px;
+}
+section.calbutton {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}

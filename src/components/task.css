@@ -1,0 +1,10 @@
+div.task {
+    color: navy;
+    background-color: darkcyan;
+    margin: 10px;
+}
+
+select {
+    background-color: ivory;
+    color: firebrick;
+}

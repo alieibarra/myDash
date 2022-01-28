@@ -9,13 +9,22 @@ header {
   color: white;
 }
 
-h3 {
-  color: dodgerblue;
-  display: flex;;
+
+h2.kanban {
+  flex-direction: row;
+}
+.container {
+  display:flex;
 }
 
-button {
-  background-color: ivory;
-  color: firebrick;
-  font-weight: bold;
+.calendar {
+  background-color: lawngreen;
+}
+
+.kanban {
+  padding: 50px;
+  margin: 50px;
+  align-items:flex-start;
+  align-content: center;
+  background-color: grey;
 }

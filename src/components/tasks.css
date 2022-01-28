@@ -1,0 +1,11 @@
+.taskContainer{
+    display: flex;
+    justify-content: center;
+    background-color: gold;
+}
+p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
