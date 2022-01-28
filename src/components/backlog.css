@@ -1,11 +1,12 @@
-.taskContainer{
+h2 {
     display: flex;
     justify-content: center;
-    background-color: gold;
+    background-color: 	#708090;
+    margin: 25px;
+    box-shadow: 10px 20px;
 }
 p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
