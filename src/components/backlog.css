@@ -1,9 +1,9 @@
-h2 {
+h2.taskList {
     display: flex;
     justify-content: center;
-    background-color: 	#708090;
+    background-color: 	#4682b4;
     margin: 25px;
-    box-shadow: 10px 20px;
+    box-shadow: 10px 10px;
 }
 p {
     display: flex;

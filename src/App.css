@@ -1,16 +1,39 @@
 header {
-  background-color:	#708090;
-  min-height: 100px;
+  background-color:	#4682b4;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: navy;
+  color: ivory;
   font-weight: bold;
+}
+header h1 {
+  font-size: 40px;
+}
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   display:flex;
-  background-color: grey;
+  justify-content: space-evenly;
+  background-color: 		#f0f8ff;
+}
+.add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addButton {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 125px;
+  font-size: 20px;
+  border-width: 10px;
+  border-color: 	#b0c4de;
+  background-color: 	#778899;
 }
 

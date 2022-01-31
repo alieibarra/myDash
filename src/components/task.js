@@ -17,7 +17,7 @@ const Task = ({task}) => {
     <p>Priority: {task.priority}</p>
     <p>Due: {task.dueDate} </p> 
     <p> STATUS: {task.status}</p>
-    <select value={taskStatus} onChange={handleChange}> 
+    <select value={task.status} onChange={handleChange}> 
       <option value="backlog">Backlog</option>
       <option value="in-progress">In Progress</option>
       <option value="completed">Completed</option>

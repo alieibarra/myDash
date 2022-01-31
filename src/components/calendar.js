@@ -13,9 +13,6 @@ const Calendar = () => {
     height="750" 
     frameborder="0" 
     scrolling="no"/>
-    <section className="calbutton">
-      <button> Add New Event 🗓</button>
-    </section>
     </div>
   ]);
 };
