@@ -1,6 +1,7 @@
 import './App.css';
 //import { useState } from 'react';
 import Calendar from './components/calendar.js'
+import TaskForm from './components/taskForm';
 import Backlog from './components/backlog.js';
 import InProgress from './components/inProgress.js';
 import Complete from './components/complete.js';
@@ -26,15 +27,24 @@ const App = () => {
     <header>
     <h1>myDash</h1>
     </header>
-    <div>
+    <div >
       <h2>Welcome, Alie! 🙋🏻‍♀️</h2>
+      <div className="topline">
+        <ul>Countdown to:
+          <li>Project: DATE/TIME</li>
+          <li>Presentation: DATE/TIME</li>
+          <li>Vacation: DATE/TIME</li>
+        </ul>
+        <button className="addButton"> CREATE NEW COUNT DOWN <br/> 📆</button>
+      </div>  
     </div>
     <div className="container">
       <Calendar className="calendar"/>
+      
       <div className="add">             
         <h2> Controls </h2>
         <button className="addButton">GO TO EMAIL <br/> 📧 </button>
-        <button className="addButton"> CREATE NEW TASK <br/> ✅ </button>
+        <TaskForm />
         <button className="addButton"> CREATE NEW EVENT <br/> 🗓 </button>
       </div>
       <Backlog tasks={TASKS}/>
