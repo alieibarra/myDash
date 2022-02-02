@@ -1,11 +1,11 @@
-h2.taskList {
+h2.backlog {
     display: flex;
     justify-content: center;
     background-color: 	#4682b4;
     margin: 25px;
     box-shadow: 10px 10px;
 }
-p {
+p.backlog {
     display: flex;
     flex-direction: column;
     justify-content: center;

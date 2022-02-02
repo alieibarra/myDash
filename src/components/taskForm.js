@@ -39,7 +39,8 @@ const TaskForm = () => {
                     name='dueDate' 
                     type='date' 
                     value={values.dueDate} 
-                    onChange={onChange('dueDate')}/><br/>
+                    onChange={onChange('dueDate')}
+                    /><br/>
                 
                 <label> Priority: </label> <br/>
                     <label> 1 </label>
@@ -66,9 +67,7 @@ const TaskForm = () => {
                     type='radio' 
                     value= '4' 
                     onChange={onChange('priority')}/><br/>
-
-                
-                
+    
             <input type='submit'></input>
         </form>
     </div>

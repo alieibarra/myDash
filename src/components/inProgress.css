@@ -1,0 +1,7 @@
+h2.inProgress {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    margin: 25px;
+    box-shadow: 10px 10px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Task from './task.js';
+import './inProgress.css';
 
 const InProgress = ({tasks}) => {
   const inProgressTasks = tasks.filter(task => task.status === "in-progress");
@@ -12,8 +13,10 @@ const InProgress = ({tasks}) => {
   
     return (
   <div >
-    <h2 className="taskList"> In Progress </h2>
-    <p>{listTasks}</p>
+    <h2 className="inPorgress"> In Progress </h2>
+    <section className="scroll">
+        <p>{listTasks}</p> 
+      </section>
   </div> 
     ); 
 };

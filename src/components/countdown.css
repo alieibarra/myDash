@@ -1,0 +1,10 @@
+.countdown {
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color:#4682b4;
+    width: 75vw;
+    overflow: scroll;
+    font-family:monospace;
+    font-size: 20px;
+}
