@@ -26,7 +26,7 @@ const EventForm = () => {
 
     return (
         <div>
-            <h3 className="eventform">Add New <br/>Event Countdown</h3>
+            <h3 className="eventform">Add New <br/> Countdown Event 👆🏼</h3>
             <form className="eventform"onSubmit={onSubmit}>
                 <label> Event: </label><br/>
                     <input

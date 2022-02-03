@@ -18,6 +18,7 @@ const Backlog = ({tasks}) => {
   return (
     <div>
       <h2 className="backlog"> Backlog </h2>
+      <div className = "numTasks"> {listTasks.length} Tasks </div>
       <section className="scroll">{listTasks}
       </section>
     </div>    

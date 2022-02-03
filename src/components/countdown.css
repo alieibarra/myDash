@@ -1,10 +1,13 @@
 .countdown {
     display:flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     background-color:black;
-    width: 75vw;
+    width: 90vw;
+    height: 150px;
     overflow: scroll;
     font-family:monospace;
-    font-size: 20px;
+    
 }

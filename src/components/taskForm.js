@@ -26,7 +26,7 @@ const TaskForm = () => {
 
     return (
         <div>
-            <h3 className="form">Add New Task</h3>
+            <h3 className="form">Add New Task 👉🏼 </h3>
             <form className="form"onSubmit={onSubmit}>
                 <label> Title: </label><br/>
                     <input
@@ -54,7 +54,7 @@ const TaskForm = () => {
                     name='priority' 
                     type='radio' 
                     value= '2' 
-                    onChange={onChange('priority')}/> <br/>
+                    onChange={onChange('priority')}/> 
                     <label> 3 </label>
                     <input
                     name='priority' 

@@ -23,17 +23,18 @@ const App = () => {
     {id: 8, title: "Test Task 8", dueDate: '2022-02-09', priority: 3, status: "completed"},
     {id: 9, title: "Test Task 9", dueDate: '2022-02-11', priority: 1, status: "in-progress"},
     {id: 10, title: "Test Task 10", dueDate: '2022-02-12', priority: 4, status: "backlog"},
-    {id: 11, title: "Test Task 11", dueDate: '2022-02-01', priority: 3, status: "completed"},
+    {id: 11, title: "SHOULD DELETE", dueDate: '2022-02-01', priority: 3, status: "completed"},
   ]; 
 
   const EVENTS = [
-    {id: 1, title: "Capstone Presentation", date: '2022-02-17'},
-    {id: 2, title: "Alie's Birthday", date: '2022-06-24'},
-    {id: 3, title: "Start Internship", date: '2022-02-28'}, 
-    {id: 4, title: "Ella's Birthday", date: '2022-02-09'},
-    {id: 5, title: "Ben's Birthday", date: '2022-10-23'},
+    {id: 1, title: "Capstone Presentation 🗣", date: '2022-02-17'},
+    {id: 2, title: "Alie's Birthday 🎂", date: '2022-06-24'},
+    {id: 3, title: "Start Internship 👩🏻‍💻", date: '2022-02-28'}, 
+    {id: 4, title: "Ella's Birthday 🎂", date: '2022-02-09'},
+    {id: 5, title: "Ben's Birthday 🎂", date: '2022-10-23'},
     {id: 6, title: "Family Vacation", date: '2022-10-15'},
     {id: 7, title: "SHOULD DELETE", date: '2022-1-15'},
+    {id: 8, title: "Anniversary 🥂 ", date: '2022-8-18'},
   ];
   //HARDWIRED DATA--TEMP👆🏼
 
@@ -42,16 +43,18 @@ const App = () => {
       <header>
         <h1>myDash</h1>
       </header>
+      <h2> “We have a strategic plan. It’s called doing things.” </h2>
       <div className="topline">
-        <EventForm /> 
         <Countdown importantDates={EVENTS}/>
       </div>
       <div className="container">
         <Calendar className="calendar"/>
-        <div className="add">             
-          <TaskForm />
+        <div className="add">    
+          <EventForm />          
           <button className="addButton">GO TO EMAIL <br/> 📧 </button>
-          <button className="addButton"> CREATE NEW EVENT <br/> 🗓 </button>
+          <TaskForm />
+          
+          
         </div>
         <Backlog tasks={TASKS}/>
         <InProgress tasks={TASKS}/>

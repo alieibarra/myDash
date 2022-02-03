@@ -14,6 +14,7 @@ const InProgress = ({tasks}) => {
     return (
   <div>
     <h2 className="inPorgress"> In Progress </h2>
+    <div className = "numTasks"> {listTasks.length} Tasks </div>
     <section className="scroll">{listTasks}
       </section>
   </div> 

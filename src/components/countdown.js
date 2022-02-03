@@ -11,8 +11,8 @@ const Countdown = ({importantDates}) => {
     return new Date(a.date) - new Date(b.date);
   });
 
-  const eventsList = sortEvents.map(importantDate => <ImportantDay importantDate = {importantDate}/>)
-  console.log(eventsList)
+  const eventsList = sortEvents.map(importantDate => <ImportantDay importantDate = {importantDate}/>);
+
 
   return (
     <div className="countdown">{eventsList}

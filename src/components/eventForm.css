@@ -1,3 +1,8 @@
 label {
     font-weight: bold;
 }
+
+.eventform {
+    background-color: #6b8e23;
+    padding: 10px;
+}
