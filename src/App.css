@@ -26,11 +26,11 @@ h2 {
   justify-content: space-evenly;
 }
 
-
 .container {
   display:flex;
   justify-content: space-evenly;
   background-color: #f0f8ff;
+
 }
 .add {
   display: flex;

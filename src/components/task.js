@@ -14,9 +14,7 @@ const Task = ({task}) => {
   return ([
   <div key={task.id} className="task">
     <h3>{task.title}</h3>
-      <p>Priority: {task.priority}</p>
-      <p>Due: {task.dueDate} </p> 
-      <p> STATUS: {task.status}</p>
+      <p>Priority: {task.priority}<br/>Due: {task.dueDate} <br/>STATUS: {task.status}</p>
     <select value={task.status} onChange={handleChange}> 
       <option value="backlog">Backlog</option>
       <option value="in-progress">In Progress</option>
