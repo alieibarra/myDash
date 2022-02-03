@@ -12,10 +12,9 @@ const InProgress = ({tasks}) => {
   const listTasks = sortInProgress.map((task) => <Task task= {task}/>); 
   
     return (
-  <div >
+  <div>
     <h2 className="inPorgress"> In Progress </h2>
-    <section className="scroll">
-        <p>{listTasks}</p> 
+    <section className="scroll">{listTasks}
       </section>
   </div> 
     ); 

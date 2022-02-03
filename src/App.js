@@ -13,19 +13,18 @@ const App = () => {
 
   //HARDWIRED DATA--TEMP👇🏼
   const TASKS = [
-    {id: 1, title: "Test Task 1", dueDate: "02/22/2022", priority: 1, status: "backlog"},
-    {id: 2, title: "Test Task 2", dueDate: "02/23/2022", priority: 3, status: "backlog"},
-    {id: 3, title: "Test Task 3", dueDate: "02/24/2022", priority: 2, status: "in-progress"}, 
-    {id: 4, title: "Test Task 4", dueDate: "02/25/2022", priority: 3, status: "in-progress"},
-    {id: 5, title: "Test Task 5", dueDate: "02/21/2022", priority: 1, status: "completed"},
-    {id: 6, title: "Test Task 6", dueDate: "02/24/2022", priority: 1, status: "in-progress"},
-    {id: 7, title: "Test Task 7", dueDate: "02/24/2022", priority: 4, status: "backlog"},
-    {id: 8, title: "Test Task 8", dueDate: "02/28/2022", priority: 3, status: "completed"},
-    {id: 9, title: "Test Task 9", dueDate: "02/24/2022", priority: 1, status: "in-progress"},
-    {id: 10, title: "Test Task 10", dueDate: "02/24/2022", priority: 4, status: "backlog"},
-    {id: 11, title: "Test Task 11", dueDate: "02/28/2022", priority: 3, status: "completed"},
+    {id: 1, title: "Test Task 1", dueDate: '2022-02-23', priority: 1, status: "backlog"},
+    {id: 2, title: "Test Task 2", dueDate: '2022-01-23', priority: 3, status: "backlog"},
+    {id: 3, title: "Test Task 3", dueDate: '2022-02-25', priority: 2, status: "in-progress"}, 
+    {id: 4, title: "Test Task 4", dueDate: '2022-02-08', priority: 3, status: "in-progress"},
+    {id: 5, title: "Test Task 5", dueDate: '2022-02-20', priority: 1, status: "completed"},
+    {id: 6, title: "Test Task 6", dueDate: '2022-02-15', priority: 1, status: "in-progress"},
+    {id: 7, title: "Test Task 7", dueDate: '2022-02-18', priority: 4, status: "backlog"},
+    {id: 8, title: "Test Task 8", dueDate: '2022-02-09', priority: 3, status: "completed"},
+    {id: 9, title: "Test Task 9", dueDate: '2022-02-11', priority: 1, status: "in-progress"},
+    {id: 10, title: "Test Task 10", dueDate: '2022-02-12', priority: 4, status: "backlog"},
+    {id: 11, title: "Test Task 11", dueDate: '2022-02-01', priority: 3, status: "completed"},
   ]; 
-
 
   const EVENTS = [
     {id: 1, title: "Capstone Presentation", date: '2022-02-17'},
@@ -34,6 +33,7 @@ const App = () => {
     {id: 4, title: "Ella's Birthday", date: '2022-02-09'},
     {id: 5, title: "Ben's Birthday", date: '2022-10-23'},
     {id: 6, title: "Family Vacation", date: '2022-10-15'},
+    {id: 7, title: "SHOULD DELETE", date: '2022-1-15'},
   ];
   //HARDWIRED DATA--TEMP👆🏼
 
@@ -41,7 +41,6 @@ const App = () => {
     <div>
       <header>
         <h1>myDash</h1>
-        <p>Welcome, Alie!</p>
       </header>
       <div className="topline">
         <EventForm /> 

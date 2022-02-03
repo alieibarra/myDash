@@ -18,10 +18,8 @@ const Backlog = ({tasks}) => {
   return (
     <div>
       <h2 className="backlog"> Backlog </h2>
-      <section className="scroll">
-        <p>{listTasks}</p> 
+      <section className="scroll">{listTasks}
       </section>
-        
     </div>    
     );       
   };

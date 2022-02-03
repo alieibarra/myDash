@@ -1,12 +1,12 @@
 div.event {
-    outline: 3px solid black;
+    outline: 3px solid #4682b4;
     display: flex;
-    padding: 2px 2px 5px 5px;
+    padding: 2px 5px 5px 5px;
     margin: 2px 15px 5px 15px;
     color: #f0f8ff;
-    min-width: 150px;
-    max-width: 200px;
-    height: 125px;
+    min-width: 175px;
+    max-width: 175px;
+    height: 100px;
     overflow: auto;
     font-style: italic;
 }

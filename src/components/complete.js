@@ -5,7 +5,7 @@ const Complete = ({tasks}) => {
   const completedTasks = tasks.filter(task => task.status === "completed");
 
   const sortCompleted = completedTasks.sort((a,b) => {
-    return a.dueDate - b.dueDate;
+    return new Date(b.dueDate) - new Date(a.dueDate);
   });
 
   const listTasks = sortCompleted.map((task) => <Task task= {task}/>); 
@@ -13,8 +13,7 @@ const Complete = ({tasks}) => {
     return (
   <div >
     <h2 className="taskList"> Completed </h2>
-    <section className="scroll">
-      <p>{listTasks}</p> 
+    <section className="scroll">{listTasks} 
     </section>
   </div> 
     ); 

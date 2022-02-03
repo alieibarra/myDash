@@ -3,13 +3,19 @@ import ImportantDay from './event.js';
 import './countdown.css';
 
 const Countdown = ({importantDates}) => {
-  const sortEvents = importantDates.sort((a,b) => {return new Date(a.date) - new Date(b.date);});
+  const today = new Date().getTime();
 
-  const eventsList = sortEvents.map((importantDate)=> <ImportantDay importantDate = {importantDate}/>)
+  const pendingEvents = importantDates.filter(importantDate => new Date(importantDate.date) > today);
+
+  const sortEvents = pendingEvents.sort((a,b) => {
+    return new Date(a.date) - new Date(b.date);
+  });
+
+  const eventsList = sortEvents.map(importantDate => <ImportantDay importantDate = {importantDate}/>)
+  console.log(eventsList)
 
   return (
-    <div>
-      <p className="countdown">{eventsList}</p>
+    <div className="countdown">{eventsList}
     </div>
   )
 };
