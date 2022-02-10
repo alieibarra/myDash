@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './event.css';
+import './importantDay.css';
 
 const ImportantDay = ({importantDate}) => {
   const [timerDays, setTimerDays] = useState();
@@ -22,7 +22,9 @@ const ImportantDay = ({importantDate}) => {
     };
     useEffect(()=> {
       startTimer();
-    });
+    }
+    )
+    ;
     return (
     <div key = {importantDate.id} className="event">
       <p className="event"> {timerDays} day(s) <br/> until <br/> {importantDate.title}</p>

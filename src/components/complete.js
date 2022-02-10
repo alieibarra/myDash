@@ -6,7 +6,6 @@ const Complete = ({tasks}) => {
 
   const completedTasks = tasks.filter(task => task.status === "completed" && new Date(task.dueDate) > new Date().getTime());
   
-  console.log(completedTasks)
 
   const sortCompleted = completedTasks.sort((a,b) => {
     return new Date(b.dueDate) - new Date(a.dueDate);

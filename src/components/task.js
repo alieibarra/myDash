@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 //import PropTypes from 'prop-types';
 import './task.css';
 
+
+
 const Task = ({task}) => {
   const [taskStatus, setTaskStatus] = useState("backlog");
 

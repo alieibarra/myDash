@@ -1,46 +1,42 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
 import './eventForm.css';
 
+
+
 const EventForm = () => {
-    const [values, setValues]  = useState({
-        message: ''
-    });
+    const [title, setTitle]  = useState('');
+    const [date, setDate]  = useState(null);
 
-    const onChange = (name) => {
-        return ({ target: { value } }) => {
-            setValues(oldValues => ({ ...oldValues, [name]: value }));
-            console.log(values)
-        }
-    }; 
-
-    const saveFormData = () => {
-        console.log(values)
-    };
-
-    const onSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        saveFormData();
-        console.log('success');
-        setValues({message: 'New Task Created'});
+        const newEvent = {title, date}
+        
+        axios.post('/events', newEvent)
+        .then (() => {
+            console.log(newEvent)
+        })
     };
 
     return (
         <div>
             <h3 className="eventform">Add New <br/> Countdown Event 👆🏼</h3>
-            <form className="eventform"onSubmit={onSubmit}>
+            <form className="eventform" onSubmit={handleSubmit}>
                 <label> Event: </label><br/>
                     <input
-                    name='title' 
-                    type='text' 
-                    value={values.title} 
-                    onChange={onChange('title')}/><br/>
+                        type="text"
+                        required
+                        value = {title}
+                        onChange = {(event) => setTitle(event.target.value)}
+                        />
+                        <br/>
                 <label> Date: </label><br/> 
-                    <input
-                    name='dueDate' 
-                    type='date' 
-                    value={values.dueDate} 
-                    onChange={onChange('dueDate')}/><br/>
-            <input type='submit'></input>
+                    <DatePicker 
+                        selected={date} 
+                        onChange = {date => setDate(date)}/><br/><br/>
+                <button type='submit'>Creat Countdown</button>
         </form>
     </div>
     )

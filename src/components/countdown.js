@@ -1,10 +1,11 @@
 import React from 'react';
-import ImportantDay from './event.js';
+import ImportantDay from './importantDay.js';
 import './countdown.css';
+
 
 const Countdown = ({importantDates}) => {
   const today = new Date().getTime();
-
+  
   const pendingEvents = importantDates.filter(importantDate => new Date(importantDate.date) > today);
 
   const sortEvents = pendingEvents.sort((a,b) => {
