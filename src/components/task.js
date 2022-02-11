@@ -14,7 +14,6 @@ const Task = ({task}) => {
   const day = dateObj.getUTCDate();
   const year = dateObj.getUTCFullYear();
 
-    //onSelect={(event) => setNewStatus(event.target.value)}
   const dueDate = month + "/" + day+ "/" + year;
 
   const [status, setNewStatus] = useState(oldStatus);
@@ -23,12 +22,13 @@ const Task = ({task}) => {
     console.log(task.title, status)
     event.preventDefault();
     setNewStatus(event.target.value)
-    const newStatus = {status}
+    const newStatus = status
     console.log(newStatus)
     
-    axios.put(tasksUrl+"/" + id, newStatus)
+    axios.put(tasksUrl+"/" + id, {
+      status : newStatus})
       .then (() => {
-        console.log(task)
+        console.log(task.title + "status changed to " + newStatus)
       })
     };
   
@@ -36,8 +36,8 @@ const Task = ({task}) => {
     axios.delete(tasksUrl+"/"+ id)
     .then(() => {
       console.log("Deleted");
-    });
-  }
+      })
+    };
 
   return ([
   <div className="task">

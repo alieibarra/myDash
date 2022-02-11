@@ -1,6 +1,6 @@
 import './App.css';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Calendar from './components/calendar.js'
 import TaskForm from './components/taskForm';
 import Backlog from './components/backlog.js';
