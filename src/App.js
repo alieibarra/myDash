@@ -1,7 +1,6 @@
 import './App.css';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import cors from 'cors';
 import Calendar from './components/calendar.js'
 import TaskForm from './components/taskForm';
 import Backlog from './components/backlog.js';
@@ -10,14 +9,10 @@ import Complete from './components/complete.js';
 import Countdown from './components/countdown';
 import EventForm from './components/eventForm';
 
-
-
-
 const tasksUrl = '/tasks'
 const eventsUrl = '/events'
 
 const App = () => {
-
   
   const [tasks, setTasks] = React.useState([]);
   React.useEffect(() => {

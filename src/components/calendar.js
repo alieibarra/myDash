@@ -12,7 +12,8 @@ const Calendar = () => {
     width="450" 
     height="600" 
     frameBorder="0" 
-    scrolling="no"/>
+    scrolling="no"
+    />
     </div>
   ]);
 };

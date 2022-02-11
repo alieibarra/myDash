@@ -13,3 +13,9 @@ select {
     color: #4682b4;
     font-weight: bold;
 }
+
+.taskEditingButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
