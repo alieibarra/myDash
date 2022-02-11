@@ -16,7 +16,7 @@ const Backlog = ({tasks}) => {
   const listTasks = sortBacklog.map((task) => <Task task= {task}/>); 
   
   return (
-    <div>
+    <div >
       <h2 className="backlog"> Backlog </h2>
       <div className = "numTasks"> {listTasks.length} Tasks </div>
       <section className="scroll">{listTasks}

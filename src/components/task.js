@@ -1,7 +1,6 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './task.css';
-
 
 const tasksUrl = '/tasks'
 
@@ -9,49 +8,47 @@ const Task = ({task}) => {
   const id = task.id
   const title = task.title
   const priority = task.priority
+  const oldStatus = task.status
   const dateObj = new Date(task.dueDate);
   const month = dateObj.getUTCMonth() + 1; 
   const day = dateObj.getUTCDate();
   const year = dateObj.getUTCFullYear();
 
+    //onSelect={(event) => setNewStatus(event.target.value)}
   const dueDate = month + "/" + day+ "/" + year;
 
-  const [status, setStatus] = useState('');
-
+  const [status, setNewStatus] = useState(oldStatus);
+  
   const handleStatusChange = (event) => {
+    console.log(task.title, status)
     event.preventDefault();
-    console.log(status)
+    setNewStatus(event.target.value)
+    const newStatus = {status}
+    console.log(newStatus)
     
-    // axios.put(tasksUrl+"/" + id)
-    //   .then (() => {
-    //     console.log("status changed to ", {status})
-    //   })
+    axios.put(tasksUrl+"/" + id, newStatus)
+      .then (() => {
+        console.log(task)
+      })
     };
   
   const handleDelete = () => {
-    axios.delete(tasksUrl+"/" + id)
-    .then(response => {
+    axios.delete(tasksUrl+"/"+ id)
+    .then(() => {
       console.log("Deleted");
     });
   }
 
   return ([
-  <div key={id.toString()} className="task">
+  <div className="task">
     <h3>{title}</h3>
-      <p>Priority: {priority}<br/>Due: {dueDate} <br/>STATUS: {task.status}</p>
-    <select defaultValue={status} onChange={handleStatusChange}> 
-      <option 
-        value='backlog' 
-        onSelect={(event) => setStatus(event.target.value)}
-        > Backlog </option>
-      <option 
-        value='in-progress'
-        onSelect={(event) => setStatus(event.target.value)}
-        > In Progress </option>
-      <option 
-      value='completed'
-      onSelect={(event) => setStatus(event.target.value)}
-      > Completed </option>
+      <p>Priority: {priority}<br/>Due: {dueDate} <br/>STATUS: {status}</p>
+    <select 
+      value = {status}
+      onChange={handleStatusChange}>
+      <option value='backlog'> Backlog </option>
+      <option value='in-progress'> In Progress </option>
+      <option value='completed'> Completed </option>
     </select>
     <div className="taskEditingButtons">
       <button onClick={handleDelete}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
@@ -17,7 +17,7 @@ const TaskForm = () => {
         .then (() => {
             console.log(newTask)
         })
-        };
+    };
 
     return (
         <div>
@@ -59,7 +59,7 @@ const TaskForm = () => {
                     <DatePicker 
                         selected={dueDate} 
                         onChange = {date => setDueDate(date)}/><br/><br/>
-            <button type='submit'>Creat Task</button>
+            <button type='submit'>Create Task</button>
         </form>
     </div>
     )

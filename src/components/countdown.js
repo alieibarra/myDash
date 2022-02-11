@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState , useEffect } from 'react';
+import axios from 'axios';
 import ImportantDay from './importantDay.js';
 import './countdown.css';
 
 
-const Countdown = ({importantDates}) => {
+const Countdown = ({events}) => {
   const today = new Date().getTime();
   
-  const pendingEvents = importantDates.filter(importantDate => new Date(importantDate.date) > today);
+  const pendingEvents = events.filter(importantDate => new Date(importantDate.date) > today);
 
   const sortEvents = pendingEvents.sort((a,b) => {
     return new Date(a.date) - new Date(b.date);
@@ -14,9 +15,9 @@ const Countdown = ({importantDates}) => {
 
   const eventsList = sortEvents.map(importantDate => <ImportantDay importantDate = {importantDate}/>);
 
-
   return (
-    <div className="countdown">{eventsList}
+    <div>
+      <ul className="countdown">{eventsList}</ul>
     </div>
   )
 };

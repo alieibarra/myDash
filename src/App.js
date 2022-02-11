@@ -42,7 +42,7 @@ const App = () => {
       </header>
       <h2> “We have a strategic plan. It’s called doing things.” </h2>
       <div className="topline">
-        <Countdown importantDates={events}/>
+        <Countdown events={events}/>
       </div>
       <div className="container">
         <Calendar className="calendar"/>
@@ -51,7 +51,7 @@ const App = () => {
           <button className="addButton">GO TO EMAIL <br/> 📧 </button>
           <TaskForm />
         </div>
-        <Backlog tasks={tasks}/>
+        <Backlog key={tasks.id} tasks={tasks}/>
         <InProgress tasks={tasks}/>
         <Complete tasks={tasks}/>
       </div>

@@ -4,7 +4,7 @@ import './calendar.css';
 
 const Calendar = () => {
   return ([
-  <div>
+  <div key={0}>
   <iframe 
     className="calendar"
     title="google calendar" 

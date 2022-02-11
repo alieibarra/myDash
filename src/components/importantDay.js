@@ -22,12 +22,11 @@ const ImportantDay = ({importantDate}) => {
     };
     useEffect(()=> {
       startTimer();
-    }
-    )
-    ;
+      }
+    );
     return (
-    <div key = {importantDate.id} className="event">
-      <p className="event"> {timerDays} day(s) <br/> until <br/> {importantDate.title}</p>
+    <div className="event">
+      <li key={importantDate.id}> {timerDays} day(s) <br/> until <br/> {importantDate.title}</li>
     </div>  
   );       
 };
