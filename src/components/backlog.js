@@ -13,7 +13,7 @@ const Backlog = ({tasks}) => {
     return a.priority - b.priority;
   });
 
-  const listTasks = sortBacklog.map((task) => <Task task= {task}/>); 
+  const listTasks = sortBacklog.map((task) => <Task key={task.id} task= {task}/>); 
   
   return (
     <div >

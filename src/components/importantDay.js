@@ -25,8 +25,8 @@ const ImportantDay = ({importantDate}) => {
       }
     );
     return (
-    <div className="event">
-      <li key={importantDate.id}> {timerDays} day(s) <br/> until <br/> {importantDate.title}</li>
+    <div key={importantDate.id}className="event">
+      <li> {timerDays} day(s) <br/> until <br/> {importantDate.title}</li>
     </div>  
   );       
 };

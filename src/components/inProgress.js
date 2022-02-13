@@ -9,7 +9,7 @@ const InProgress = ({tasks}) => {
     return a.priority - b.priority;
   });
 
-  const listTasks = sortInProgress.map((task) => <Task task= {task}/>); 
+  const listTasks = sortInProgress.map((task) => <Task key={task.id} task= {task}/>); 
   
     return (
   <div>

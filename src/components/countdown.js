@@ -1,5 +1,4 @@
-import React, { useState , useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import ImportantDay from './importantDay.js';
 import './countdown.css';
 
@@ -13,7 +12,7 @@ const Countdown = ({events}) => {
     return new Date(a.date) - new Date(b.date);
   });
 
-  const eventsList = sortEvents.map(importantDate => <ImportantDay importantDate = {importantDate}/>);
+  const eventsList = sortEvents.map(importantDate => <ImportantDay key={importantDate.id} importantDate = {importantDate}/>);
 
   return (
     <div>

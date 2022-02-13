@@ -40,7 +40,7 @@ const Task = ({task}) => {
     };
 
   return ([
-  <div className="task">
+  <div key={task.id} className="task">
     <h3>{title}</h3>
       <p>Priority: {priority}<br/>Due: {dueDate} <br/>STATUS: {status}</p>
     <select 

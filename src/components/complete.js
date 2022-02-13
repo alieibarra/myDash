@@ -11,7 +11,7 @@ const Complete = ({tasks}) => {
     return new Date(b.dueDate) - new Date(a.dueDate);
   });
 
-  const listTasks = sortCompleted.map((task) => <Task task= {task}/>); 
+  const listTasks = sortCompleted.map((task) => <Task key={task.id} task= {task}/>); 
   
     return (
   <div >
