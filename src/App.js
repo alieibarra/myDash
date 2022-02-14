@@ -11,6 +11,7 @@ import EventForm from './components/eventForm';
 
 const tasksUrl = '/tasks'
 const eventsUrl = '/events'
+const email= 'https://mail.google.com/mail/u/0/?tab=rm&ogbl'
 
 const App = () => {
   
@@ -38,20 +39,20 @@ const App = () => {
   return (
     <div>
       <header>
-        <h1>myDash</h1>
+        <h1>👩🏻‍💻 myDash 👩🏻‍💻</h1>
       </header>
-      <h2> “We have a strategic plan. It’s called doing things.” </h2>
-      <div className="topline">
+      <p className="quote"> “We have a strategic plan. It’s called doing things.” </p>
+      <section className="countContainer">
         <Countdown events={events}/>
-      </div>
+      </section>
       <div className="container">
         <Calendar className="calendar"/>
         <div className="add">    
-          <EventForm />          
-          <button className="addButton">GO TO EMAIL <br/> 📧 </button>
+          <EventForm />
+          <a href= {email} target='_blank' rel="noopener noreferrer" className="email"> 📧 </a>          
           <TaskForm />
         </div>
-        <Backlog key={tasks.id} tasks={tasks}/>
+        <Backlog tasks={tasks}/>
         <InProgress tasks={tasks}/>
         <Complete tasks={tasks}/>
       </div>

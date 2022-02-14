@@ -6,9 +6,8 @@
     padding: 10px;
     background-color:black;
     width: 90vw;
-    height: 150px;
-    overflow: scroll;
+    height: 125px;
+    overflow: auto;
     font-family:monospace;
     justify-content: flex-start;
-    
 }

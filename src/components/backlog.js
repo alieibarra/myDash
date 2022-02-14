@@ -1,7 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import Task from './task.js';
-import './backlog.css';
+import './taskList.css';
 
 
 
@@ -16,8 +16,8 @@ const Backlog = ({tasks}) => {
   const listTasks = sortBacklog.map((task) => <Task key={task.id} task= {task}/>); 
   
   return (
-    <div >
-      <h2 className="backlog"> Backlog </h2>
+    <div className="taskList">
+      <h2> Backlog </h2>
       <div className = "numTasks"> {listTasks.length} Tasks </div>
       <section className="scroll">{listTasks}
       </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Task from './task.js';
+import './taskList.css';
 
 const Complete = ({tasks}) => {
   
@@ -14,8 +15,8 @@ const Complete = ({tasks}) => {
   const listTasks = sortCompleted.map((task) => <Task key={task.id} task= {task}/>); 
   
     return (
-  <div >
-    <h2 className="taskList"> Completed </h2>
+  <div className="taskList">
+    <h2> Completed </h2>
     <div className = "numTasks"> {listTasks.length} Tasks </div>
     <section className="scroll">{listTasks} 
     </section>

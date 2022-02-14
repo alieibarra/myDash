@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from './task.js';
-import './inProgress.css';
+import './taskList.css';
 
 const InProgress = ({tasks}) => {
   const inProgressTasks = tasks.filter(task => task.status === "in-progress");
@@ -12,8 +12,8 @@ const InProgress = ({tasks}) => {
   const listTasks = sortInProgress.map((task) => <Task key={task.id} task= {task}/>); 
   
     return (
-  <div>
-    <h2 className="inPorgress"> In Progress </h2>
+  <div className="taskList">
+    <h2> In Progress </h2>
     <div className = "numTasks"> {listTasks.length} Tasks </div>
     <section className="scroll">{listTasks}
       </section>

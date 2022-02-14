@@ -8,18 +8,16 @@ header {
   font-weight: bold;
 }
 h1 {
-  font-size: 40px;
+  font-size: 45px;
 }
-h2 {
+.quote {
   display: flex;
   justify-content: center;
+  font-size: 20px;
+  
 }
 
-.countdownTitle {
-  align-items: center;
-}
-
-.topline {
+.countContainer {
   display: flex;
   flex-direction: row;
   background-color: 	#f0f8ff;
@@ -30,25 +28,26 @@ h2 {
   display:flex;
   justify-content: space-evenly;
   background-color: #f0f8ff;
-
 }
+
 .add {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.addButton {
-  display: flex;
-  margin: 25px;
-  width: 150px;
-  font-size: 20px;
-  border-width: 10px;
-  border-color: 	#b0c4de;
-  background-color: 	#778899;
+  justify-content: space-evenly;
 }
 
 .scroll {
-  height: 600px;
-  overflow: scroll;
+  height: 550px;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.email {
+  font-size: 75px;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
 }

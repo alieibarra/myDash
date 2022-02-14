@@ -1,21 +1,43 @@
-div.task {
-
+.task {
     background-color: #4682b4;
+    height: 175px;
     margin: 25px;
-    padding: 2px 5px 2px 5px;
+    padding: 5px 10px 5px 10px;
     box-shadow: 10px 10px;
     width: 150px;
-    line-height: 1.3;
+    line-height: 1.5;
+    overflow: auto;
+    
 }
 
 select {
     background-color: ivory;
     color: #4682b4;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .taskEditingButtons {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     align-items: flex-end;
+
+}
+
+.updateTask {
+    background-color: 	ivory;
+    margin: 5px 0px 5px 0px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4682b4;
+}
+.deleteTask {
+    align-content: center;
+    background-color: #4682b4;
+    text-align: center;
+    color: maroon;
+    width: 30px;
+    border: none;
+    margin: 5px 0px 0px 0px
 }

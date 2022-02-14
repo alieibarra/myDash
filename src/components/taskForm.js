@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
@@ -15,6 +15,7 @@ const TaskForm = () => {
             
         axios.post('/tasks', newTask)
         .then (() => {
+            window.location.reload()
             console.log(newTask)
         })
     };

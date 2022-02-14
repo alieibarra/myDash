@@ -4,8 +4,6 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './eventForm.css';
 
-
-
 const EventForm = () => {
     const [title, setTitle]  = useState('');
     const [date, setDate]  = useState(null);
@@ -16,13 +14,14 @@ const EventForm = () => {
         
         axios.post('/events', newEvent)
         .then (() => {
-            console.log(newEvent)
+            window.location.reload();
+            console.log(newEvent);
         })
     };
 
     return (
         <div>
-            <h3 className="eventform">Add New <br/> Countdown Event 👆🏼</h3>
+            <h3 className="eventform">Add New Event 👆🏼</h3>
             <form className="eventform" onSubmit={handleSubmit}>
                 <label> Event: </label><br/>
                     <input

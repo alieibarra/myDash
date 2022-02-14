@@ -2,7 +2,6 @@ import React from 'react';
 import ImportantDay from './importantDay.js';
 import './countdown.css';
 
-
 const Countdown = ({events}) => {
   const today = new Date().getTime();
   
