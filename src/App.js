@@ -9,9 +9,10 @@ import Complete from './components/complete.js';
 import Countdown from './components/countdown';
 import EventForm from './components/eventForm';
 
+
 const tasksUrl = '/tasks'
 const eventsUrl = '/events'
-const email= 'https://mail.google.com/mail/u/0/?tab=rm&ogbl'
+const emailLink = process.env.REACT_APP_MYDASH_EMAIL
 
 const App = () => {
   
@@ -49,7 +50,7 @@ const App = () => {
         <Calendar className="calendar"/>
         <div className="add">    
           <EventForm />
-          <a href= {email} target='_blank' rel="noopener noreferrer" className="email"> 📧 </a>          
+          <a href= {emailLink} target='_blank' rel="noopener noreferrer" className="email"> 📧 </a>          
           <TaskForm />
         </div>
         <Backlog tasks={tasks}/>
