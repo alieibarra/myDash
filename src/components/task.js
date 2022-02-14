@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './task.css';
 
-const tasksUrl = '/tasks'
+const tasksUrl = process.env.REACT_APP_MYDASH_BACKEND_TASKS
 
 const Task = ({task}) => {
   const id = task.id

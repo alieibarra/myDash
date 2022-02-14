@@ -4,6 +4,8 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './taskForm.css';
 
+const tasksUrl = process.env.REACT_APP_MYDASH_BACKEND_TASKS
+
 const TaskForm = () => {
     const [title, setTitle]  = useState('');
     const [priority, setPriority]  = useState(null);
@@ -13,7 +15,7 @@ const TaskForm = () => {
         event.preventDefault();
         const newTask = {title, dueDate, priority}
             
-        axios.post('/tasks', newTask)
+        axios.post(tasksUrl, newTask)
         .then (() => {
             window.location.reload()
             console.log(newTask)

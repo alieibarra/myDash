@@ -4,6 +4,8 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './eventForm.css';
 
+const eventsUrl = process.env.REACT_APP_MYDASH_BACKEND_EVENTS
+
 const EventForm = () => {
     const [title, setTitle]  = useState('');
     const [date, setDate]  = useState(null);
@@ -12,7 +14,7 @@ const EventForm = () => {
         event.preventDefault();
         const newEvent = {title, date}
         
-        axios.post('/events', newEvent)
+        axios.post(eventsUrl, newEvent)
         .then (() => {
             window.location.reload();
             console.log(newEvent);

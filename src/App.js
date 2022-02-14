@@ -10,8 +10,8 @@ import Countdown from './components/countdown';
 import EventForm from './components/eventForm';
 
 
-const tasksUrl = '/tasks'
-const eventsUrl = '/events'
+const tasksUrl = process.env.REACT_APP_MYDASH_BACKEND_TASKS
+const eventsUrl = process.env.REACT_APP_MYDASH_BACKEND_EVENTS
 const emailLink = process.env.REACT_APP_MYDASH_EMAIL
 
 const App = () => {
