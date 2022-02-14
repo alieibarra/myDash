@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './eventForm.css';
 
-const eventsUrl = process.env.REACT_APP_MYDASH_BACKEND_EVENTS
+const eventsUrl = '/events'
 
 const EventForm = () => {
     const [title, setTitle]  = useState('');

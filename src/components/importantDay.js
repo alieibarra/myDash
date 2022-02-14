@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './importantDay.css';
 
-const eventsUrl = process.env.REACT_APP_MYDASH_BACKEND_EVENTS
+const eventsUrl = '/events'
 
 const ImportantDay = ({importantDate}) => {
   const [timerDays, setTimerDays] = useState();

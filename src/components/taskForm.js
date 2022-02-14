@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './taskForm.css';
 
-const tasksUrl = process.env.REACT_APP_MYDASH_BACKEND_TASKS
+const tasksUrl = '/tasks'
 
 const TaskForm = () => {
     const [title, setTitle]  = useState('');
