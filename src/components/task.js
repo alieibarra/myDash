@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './task.css';
 
-const tasksUrl = '/tasks'
+const tasksUrl = 'https://mydash-backend.herokuapp.com/tasks'
 
 const Task = ({task}) => {
   const id = task.id

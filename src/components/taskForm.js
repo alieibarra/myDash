@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './taskForm.css';
 
-const tasksUrl = '/tasks'
+const tasksUrl = 'https://mydash-backend.herokuapp.com/tasks'
 
 const TaskForm = () => {
     const [title, setTitle]  = useState('');

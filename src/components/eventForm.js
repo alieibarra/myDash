@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
 import './eventForm.css';
 
-const eventsUrl = '/events'
+const eventsUrl = 'https://mydash-backend.herokuapp.com/events'
 
 const EventForm = () => {
     const [title, setTitle]  = useState('');

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './importantDay.css';
 
-const eventsUrl = '/events'
+const eventsUrl = 'https://mydash-backend.herokuapp.com/events'
 
 const ImportantDay = ({importantDate}) => {
   const [timerDays, setTimerDays] = useState();

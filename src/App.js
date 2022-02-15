@@ -10,8 +10,8 @@ import Countdown from './components/countdown';
 import EventForm from './components/eventForm';
 
 
-const tasksUrl = '/tasks'
-const eventsUrl = '/events'
+const tasksUrl = 'https://mydash-backend.herokuapp.com/tasks'
+const eventsUrl = 'https://mydash-backend.herokuapp.com/events'
 
 const App = () => {
   
@@ -59,7 +59,5 @@ const App = () => {
     </div>
   );
 };
-
-
 
 export default App;

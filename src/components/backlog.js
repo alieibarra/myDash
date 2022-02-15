@@ -3,8 +3,6 @@ import React from 'react';
 import Task from './task.js';
 import './taskList.css';
 
-
-
 const Backlog = ({tasks}) => {
   
   const backlogTasks = tasks.filter(task => task.status === "backlog");

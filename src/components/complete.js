@@ -4,7 +4,6 @@ import './taskList.css';
 
 const Complete = ({tasks}) => {
   
-
   const completedTasks = tasks.filter(task => task.status === "completed" && new Date(task.dueDate) > new Date().getTime());
   
 
